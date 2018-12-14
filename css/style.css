@@ -1,0 +1,799 @@
+/* Color Scheme(sorted by intensity):
+rgb(252, 255, 252); white with a slight hint of green, general background, very neutral.
+rgb(213, 255, 202) white with greenish tint - background color.
+#77CE84 green with a bit of grey
+rgb(26, 204, 26) bright green, most often used.
+rgb(6, 173, 6) Deep dark green(hover effect?).
+
+Any class/ id that are closely related to each other and have 3+ entries gets its own region.
+so for example .class-main{}, .class-main p{}, .class-main h1{}, #class-main-item{}, #class-main-item:hover{} would all be grouped under its own class-main region. */
+
+body {
+    background-color: rgb(252, 255, 252);
+    margin: 0px;
+    background-image: url('../images/background-image.png');
+    background-size: 100%, 100%;
+    font-family: verdana;
+    font-size: 16px;
+}
+
+/*#region General css, used in multiple scripts/ pages */
+
+    .main-container {
+        margin-top: 12px;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .smalltalk {
+        float: left;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 24px;
+    }
+
+    .clearFix {
+        clear: both;
+    }
+
+    /*#region container-backdrop */
+
+        .container-backdrop {
+            overflow: hidden;
+            position: relative;
+            width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+            padding-bottom: 32px;
+            height: 77%;
+            background-color: rgb(252, 255, 252);
+        }
+
+        .container-backdrop h1 {
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 12px;
+        }
+
+        .container-backdrop p {
+            font-size: 20px;
+        }
+
+    /*#endregion */
+
+    /*#region custom scrollbar on div's */
+
+        /* width */
+        div::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        div::-webkit-scrollbar-track {
+            background: rgb(252, 255, 252);
+        }
+        
+        /* Handle */
+        div::-webkit-scrollbar-thumb {
+            background: #77CE84;
+        }
+
+        /* Handle on hover */
+        div::-webkit-scrollbar-thumb:hover {
+            background: rgb(26, 204, 26);
+        }
+
+    /*#endregion */
+/*#endregion */
+
+/*#region index.php */
+    /*#region welcome-image */
+
+        .welcome-image {
+            position: relative;
+            top:0px;
+            left:0px;
+            height: 55%;
+        }
+
+        .welcome-image img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0px;
+        }
+
+        .welcome-image h2 {
+            top: 100px;
+            padding-left: 16px;
+            position: absolute;
+            color: white;
+            font-family: verdana;
+            font-size: 48px;
+        }
+
+        .welcome-image h3 {
+            width: 50%;
+            top: 202px;
+            padding-left: 16px;
+            position: absolute;
+            color: white;
+            font-family: verdana;
+            font-size: 25px;
+            padding-top: 24px;
+            border-top: 2px solid rgb(26, 204, 26);
+        }
+
+    /*#endregion */
+
+    /*#region platform-type */
+
+        .platform-type p {
+            float: left;
+            color: black;
+            background-color: rgb(26, 204, 26);
+            padding: 40px;
+            width: 256px;
+            font-family: verdana;
+            font-size: 42px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .platform-type p:hover {
+            background-color: rgb(6, 173, 6);
+        }
+
+        #platform1 {
+            margin-left: 84px;
+            margin-right: 84px;
+        }
+
+        #platform3 {
+            margin-right: 72px;
+            margin-left: 84px;
+        }
+
+    /*#endregion */
+/*#endregion */
+
+/*#region shop.php */
+
+    .product-container {
+        overflow: auto;
+        margin-left: 15%;
+        margin-right: 15%;
+        width: 70%;
+        height: 789px;
+        padding-top: 2px;
+    }
+
+    .product-item {
+        position: relative;
+        width: 250px;
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+        float: left;
+        background-color: rgb(252, 255, 252);
+        height: 356px;
+    }
+
+    .product-amountTag {
+        position: absolute;
+        left: 0px;
+        top: 179px;
+        height: 21px;
+        width: 50px;
+        font-size: 16px;
+        font-family: verdana;
+    }
+
+    #product-amountNum {
+        position: absolute;
+        margin: 0 auto;
+        padding-bottom: 1px;
+        padding-top: 1px;
+        left: 7px;
+    }
+
+    .product-priceTag {
+        position: absolute;
+        width: 125px;
+        height: 42px;
+        right: 0px;
+        top: 158px;
+        font-family: verdana;
+        font-size: 24px;
+    }
+
+    .product-priceTag p {
+        position: absolute;
+        margin: 0 auto;
+        top: 6px;
+        left: 8px;
+    }
+
+    .product-title {
+        position: absolute;
+        top: 184px;
+        left: 8px;
+        font-size: 23px;
+    }
+
+    .product-buybutton {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 40px;
+        color: black;
+        font-size: 24;
+        border: 0px;
+        cursor: pointer;
+    }
+
+    /*#region PS3 Color Scheme */
+
+        .product-color1 {
+            background-color: #3498DC;
+        }
+
+        .product-buybutton1 {
+            background-color: rgb(161, 197, 238);
+        }
+
+        .product-buybutton1:hover {
+            background-color: #3498DC;
+        }
+
+    /*#endregion */
+
+    /*#region  PC Color Scheme */
+
+        .product-color2 {
+            background-color: rgb(145, 145, 145);
+        }
+
+        .product-buybutton2 {
+            background-color: rgb(202, 202, 202);
+        }
+
+        .product-buybutton2:hover {
+            background-color: rgb(145, 145, 145);
+        }
+
+    /*#endregion */
+
+    /*#region  XBOX Color Scheme */
+
+        .product-color3 {
+            background-color: rgb(26, 204, 26);
+        }
+
+        .product-buybutton3 {
+            background-color: rgb(213, 255, 202);
+        }
+
+        .product-buybutton3:hover {
+            background-color: rgb(26, 204, 26);
+        }
+
+    /*#endregion */
+/*#endregion */
+
+/*#region purchase.php */
+
+    .order-table  {
+        margin-top: 32px;
+        margin-left: 5%;
+        margin-right: 5%;
+        background-color: rgb(213, 255, 202);
+        width: 90%;
+        overflow: auto;
+        height: 85%;
+        text-align: left;
+    }
+
+    .order-table p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .clearDiv-border {
+        border-bottom: 2px solid rgb(26, 204, 26);
+    }
+
+    /*#region table-head */
+
+        #table-head {
+            width: 100%;
+        }
+
+        #table-head-game {
+            float: left;
+            width: 18.25%;
+        }
+
+        #table-head-image {
+            float: left;
+            width: 23.5%;
+        }
+
+        #table-head-image p {
+            padding-left: 16px;
+        }
+
+        #table-head-count {
+            float: left;
+            width: 8%;
+        }
+
+        #table-head-count p {
+            text-align: center;
+            padding-right: 16px;
+        }
+
+        #table-head-des {
+            float: left;
+            width: 40%;
+        }
+
+        #table-head-des p {
+            padding-left: 32px;
+        }
+
+        #table-head-price {
+            float: left;
+            width: 10.25%;
+        }
+
+        #table-head-price p {
+            text-align: center;
+            padding-right: 16px;
+        }
+
+    /*#endregion */
+
+    /*#region product-order */
+
+        .product-order {
+            overflow: hidden;
+            height: 211px;
+        }
+
+        .product-order-imageDiv {
+            float: left;
+            width: 23.5%;
+            height: 211px;
+        }
+
+        .product-order-image {
+            width: 250px;
+            height: 179px;
+            float: left;
+            padding-top: 16px;
+            padding-left: 16px;
+        }
+
+        .product-order-countDiv {
+            width: 8%;
+            float: left;
+        }
+
+        .product-order h6 {
+            margin-top: 94px;
+            text-align: center;
+            padding-right: 16px;
+        }
+
+        .product-order p {
+            font-size: 16px;
+            float: left;
+            text-align: left;
+            width: 40%;
+            margin-top: 16px;
+            margin-left: 1%;
+        }
+
+        .product-order h4 {
+            width: 17.25%;
+            float: left;
+            text-align: left;
+            margin-top: 90px;
+        }
+
+        .product-order h5 {
+            margin-top: 90px;
+            float: left;
+            width: 10.25%;
+            text-align: center;
+        }
+
+    /*#endregion */
+
+    /*#region order-footer*/
+
+        #order-footer {
+            width: 97%;
+            height: 48px;
+            padding-left: 2%;
+            margin-right: 1%;
+            margin-top: -22px;
+        }
+
+        #order-footer-buyButtonDiv {
+            float: left;
+            width: 19%;
+            margin-top: 16px;
+        }
+
+        #order-footer-buyButton {
+            height: 42px;
+            width: 100%;
+            color: black;
+            font-size: 26px;
+            background-color: rgb(26, 204, 26);
+            border: 1px solid rgb(6, 173, 6);
+        }
+
+        #order-footer-buyButton:hover {
+            background-color: rgb(6, 173, 6);
+        }
+
+        .clearSide2pc {
+            width: 2%;
+            height: 100%;
+            float: left;
+        }
+
+        .clearSide10pc {
+            width: 10%;
+            height: 100%;
+            float: left;
+        }
+
+        #order-footer-clearButtonDiv {
+            float: left;
+            width: 19%;
+            margin-top: 16px;
+        }
+
+        #order-footer-clearButton {
+            height: 42px;
+            width: 100%;
+            color: black;
+            font-size: 26px;
+            background-color: rgb(26, 204, 26);
+            border: 1px solid rgb(6, 173, 6);
+        }
+
+        #order-footer-clearButton:hover {
+            background-color: rgb(6, 173, 6);
+        }
+
+        #order-footer h2 {
+            float: left;
+            width: 25%;
+            text-align: center;
+        }
+
+    /*#endregion */
+/*#endregion */
+
+/*#region contact.php */
+
+    .contact-info {
+        padding-left: 250px;
+        margin-left: 16px;
+        width: 300px;
+        height: 400px;
+        float: left;
+    }
+
+    .contactpage-message img {
+        float: left;
+        margin-left: 10%;
+    }
+
+    .center-aligned {
+        float: left;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 36px;
+    }
+
+    /*#region contact-form */
+
+        .contact-form {
+            margin-top: 12px;
+            margin-bottom: 12px;
+            width: 732px;
+            height: 376px;
+            float: right;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-left: 2px solid rgb(213, 255, 202);
+        }
+
+        .contact-form h2 {
+            margin: 0 auto;
+            text-align: center;
+            width: 40%;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgb(26, 204, 26)
+        }
+
+        .contact-form h4 {
+            margin-bottom: 12px;
+            width: 45%;
+        }
+
+        #contact-formH4Left {
+            float: left;
+        }
+
+        #contact-formH4Right {
+            float: right;
+        }
+
+        /*#region inputLine */
+
+            .inputLine-single {
+                width: 100%;
+                font-family: verdana;
+                font-size: 16px;
+            }
+
+            .inputLine-single input {
+                float: left;
+                width: 45%;
+                height: 31px;
+            }
+
+            #inputLine-singleRight {
+                float: right;
+            }
+
+            .inputLine-multiple {
+                float: left;
+                width: 100%;
+            }
+
+            .inputLine-multiple textarea {
+                width: 100%;
+                resize: none;
+                margin-bottom: 8px;
+            }
+
+            #submit-formDiv {
+                width: 50%;
+                float: left;
+            }
+
+            #submit-form{
+                width: 75%;
+                font-size: 24px;
+                height: 15%;
+                margin-top: 7%;
+                margin-left: 15%;
+                background-color: rgb(26, 204, 26);
+                border: none;
+                color: white;
+            }
+            
+            #thankYou {
+                margin-top: 5.5%;
+            }
+
+            #submit-form:hover {
+                background-color: rgb(6, 173, 6);
+            }
+
+        /*#endregion */
+    /*#endregion */
+
+    .clearDiv-lightBorder {
+        border-bottom: 2px solid rgb(213, 255, 202);
+    }
+
+    .smalltalk-contact {
+        width: 800px;
+    }
+
+    .adress-aligned {
+        float: left;
+        font-weight: bold;
+        margin-top: -8px;
+    }
+    #adress-alignedtop {
+        margin-top: 10px;
+    }
+
+    /*#region left-aligned */
+
+        .left-aligned {
+            position: absolute;
+            top: 41px;
+            left: 16px;
+        }
+
+        #left-aligned2 {
+            top: 111px;
+        }
+
+        #left-aligned3 {
+            top: 181px;
+        }
+
+    /*#endregion */
+/*#endregion */
+
+/*#region header.php */
+
+    #header {
+        overflow: hidden;
+        background-color: rgb(226, 255, 218);
+        flex-basis: 100%;
+        height: 56px;
+        border-color: rgb(26, 204, 26);
+        border-width: 4px;
+        border-style: solid;
+    } 
+
+    /*#region header-logo */
+
+        #header-logo {
+            float: left;
+        }
+        #header-logo:hover {
+            background-color: rgb(26, 204, 26);
+        }
+
+        #header-logo img {
+            float: left;
+            margin-left: 8px;
+        }
+
+        #header-logo h1 {
+            float: left;
+            margin: 0 auto;
+            margin-top: 8px;
+            margin-left: 16px;
+            color: black;
+            font-family: verdana;
+            font-size: 32px;
+            margin-right: 8px;
+        }
+
+    /*#endregion */
+/*#endregion */
+
+/*#region footer.php */
+
+    #footer {
+        background-color: rgb(226, 255, 218);
+        position: fixed;
+        height: 56px;
+        width: 70%;
+        bottom: 0px;
+        left: 15%;
+        box-sizing: border-box;
+        border-color: rgb(26, 204, 26);
+        border-style: solid;
+        border-width: 4px;
+        border-bottom: 0px;
+    }
+
+    #footer p {
+        text-align: center;
+        font-family: verdana;
+        font-size: 17px;
+    }
+
+/*#endregion */
+
+/*#region nav.php */
+
+    .nav {
+        background-color: rgb(26, 204, 26);
+        height: 48px;
+    }
+
+    .nav p {
+        color: black;
+        text-align: center;
+        margin: 0 auto;
+        font-family: verdana;
+        padding-top: 10px;
+        padding-bottom: 14px;
+        padding-left: 32px;
+        font-size: 20px;
+        width: 7.5%;
+    }
+
+    .nav p:hover {
+        background-color: rgb(6, 173, 6);
+    }
+
+    .nav-left {
+        float: left;
+        padding-right: 32px;
+        border-right: 2px solid rgb(213, 255, 202);
+    }
+
+    .nav-right {
+        float: right;
+        padding-right: 32px;
+        border-left: 2px solid rgb(213, 255, 202);
+    }
+
+    /*#region dropDown button */
+
+        .dropBtn {
+            background-color: rgb(26, 204, 26);
+            font-size: 20px;
+            height: 48px;
+            font-family: verdana;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .dropBtn:hover {
+            background-color: rgb(6, 173, 6);
+        }
+
+        .dropDown {
+            border-left: 2px solid rgb(213, 255, 202);
+            position: relative;
+            width: 12.5%;
+            float: right;
+        }
+
+        .dropDown-content {
+            border-left: 2px solid rgb(6, 173, 6);
+            border-right: 2px solid rgb(6, 173, 6);
+            display: none;
+            left: -2px;
+            height: 28px;
+            padding-top: 8px;
+            position: absolute;
+            background-color: rgb(26, 204, 26);
+            width: 100%;
+            z-index: 1;
+            color: black;
+            font-family: verdana;
+            text-align: center;
+            border-top: 2px solid rgb(6, 173, 6);
+        }
+
+        .dropDown-content a {
+            padding: 8px;
+            width: 100%;
+            margin: 0 auto;
+            font-size: 20px;
+        }
+
+        .dropDown-content:hover {
+            background-color: rgb(6, 173, 6);
+        }
+
+        #myDropDown2 {
+            top: 86px;
+        }
+
+        #myDropDown3 {
+            top: 124px;
+            border-bottom: 2px solid rgb(6, 173, 6);
+        }
+
+        /* .show class will be added to dropDown by css, so that the options are displayed. */
+
+        .show {
+            display: block;
+        }
+
+    /*#endregion */
+/*#endregion*/
