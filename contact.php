@@ -25,10 +25,10 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
     <body>
-        <?php include "php\header.php"; ?> <!-- Include header from header.php in php folder. It's a standard element of each page so this saves a lot of lines. -->
+        <?php include "php/header.php"; ?> <!-- Include header from header.php in php folder. It's a standard element of each page so this saves a lot of lines. -->
 
         <div class="main-container">
-            <?php include "php\\nav.php"; ?> <!-- Include navigation from nav.php in php folder. It's a standard element of each page so this saves a lot of lines. -->
+            <?php include "php/nav.php"; ?> <!-- Include navigation from nav.php in php folder. It's a standard element of each page so this saves a lot of lines. -->
         </div>
 
         <div class="container-backdrop">
@@ -84,6 +84,6 @@
             </div>
         </div>
 
-        <?php include "php\\footer.php"; ?> <!-- Include footer from footer.php in php folder. It's a standard element of each page so this saves a lot of lines. -->
+        <?php include "php/footer.php"; ?> <!-- Include footer from footer.php in php folder. It's a standard element of each page so this saves a lot of lines. -->
     </body>
 </html>
